@@ -1,53 +1,134 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <title>Mi Empresa</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #f4f4f4;
-    }
-    header {
-      background-color: #0B0DAF;
-      color: white;
-      padding: 30px;
-      text-align: center;
-    }
-    section {
-      padding: 40px;
-      text-align: center;
-    }
-    .boton {
-      background-color: #FF6600;
-      color: white;
-      padding: 12px 25px;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-    footer {
-      background-color: #222;
-      color: white;
-      text-align: center;
-      padding: 15px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Protección Civil & Seguridad</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6fa;
+}
+
+header {
+  background: linear-gradient(135deg, #0B0DAF, #1d20d6);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 40px;
+}
+
+header p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.boton-principal {
+  background-color: #FF6600;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.titulo-seccion {
+  font-size: 30px;
+  margin-bottom: 40px;
+  color: #0B0DAF;
+}
+
+.servicios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.tarjeta {
+  background: white;
+  padding: 30px;
+  width: 280px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.tarjeta h3 {
+  color: #0B0DAF;
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+footer {
+  background-color: #0B0DAF;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+</style>
 </head>
+
 <body>
 
 <header>
   <h1>Protección Civil & Seguridad</h1>
-  <p>Consultoría Profesional</p>
+  <p>Consultoría Profesional en Gestión de Riesgos</p>
+  <a href="#contacto" class="boton-principal">Solicitar Asesoría</a>
 </header>
 
 <section>
-  <h2>Nuestros Servicios</h2>
-  <p>Programas internos, capacitación, brigadas, análisis de riesgos.</p>
-  <a href="#" class="boton">Contáctanos</a>
+  <h2 class="titulo-seccion">Nuestros Servicios</h2>
+  <div class="servicios">
+    <div class="tarjeta">
+      <h3>Programas Internos</h3>
+      <p>Elaboración y actualización conforme a normatividad vigente.</p>
+    </div>
+    <div class="tarjeta">
+      <h3>Capacitación</h3>
+      <p>Formación de brigadas y simulacros empresariales.</p>
+    </div>
+    <div class="tarjeta">
+      <h3>Análisis de Riesgos</h3>
+      <p>Identificación y evaluación de vulnerabilidades.</p>
+    </div>
+  </div>
 </section>
 
+<section id="contacto">
+  <h2 class="titulo-seccion">Contacto</h2>
+  <p>Escríbenos para una asesoría personalizada.</p>
+</section>
+
+<a href="https://wa.me/525611675838" class="whatsapp" target="_blank">
+  WhatsApp
+</a>
+
 <footer>
-  © 2026 Mi Empresa
+  © 2026 Protección Civil & Seguridad | Todos los derechos reservados
 </footer>
 
 </body>
