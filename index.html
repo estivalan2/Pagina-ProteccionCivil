@@ -14,7 +14,7 @@ body {
 
 /* ===== MENU SUPERIOR ===== */
 .menu {
-  background-color: #FF6600; /* mismo naranja del botón */
+  background-color: #FF6600;
   padding: 15px;
   text-align: center;
   position: sticky;
@@ -26,7 +26,7 @@ body {
 .menu a {
   margin: 0 15px;
   text-decoration: none;
-  color: white; /* ahora blanco para que contraste */
+  color: white;
   font-weight: bold;
 }
 
@@ -133,7 +133,7 @@ footer {
 }
 
 /* ============================= */
-/* INICIO MODIFICACIÓN RESPONSIVE*/
+/* RESPONSIVE */
 /* ==============================*/
 
 @media (max-width: 768px) {
@@ -150,7 +150,6 @@ footer {
     font-size: 15px;
   }
 
-  /* MENÚ MÁS COMPACTO EN CELULAR */
   .menu {
     padding: 10px;
   }
@@ -176,20 +175,11 @@ footer {
 
 }
 
-/* ==================================== */
-/* =======  FIN DEL RESPONSIVE  ======= */
-/* ==================================== */
-
-
-
-  
-  
 </style>
 </head>
 
 <body>
 
-<!-- ===== MENU ===== -->
 <nav class="menu">
   <a href="#">Inicio</a>
   <a href="#quienes">Quiénes somos</a>
@@ -204,7 +194,6 @@ footer {
   <a href="#contacto" class="boton-principal">Solicitar Asesoría</a>
 </header>
 
-<!-- ===== QUIENES SOMOS ===== -->
 <section id="quienes">
   <h2 class="titulo-seccion">¿QUIÉNES SOMOS?</h2>
   <p>
@@ -242,39 +231,8 @@ footer {
 
 <section id="cursos">
   <h2 class="titulo-seccion">CURSOS DE CAPACITACIÓN</h2>
-  <div class="servicios">
-    <div class="tarjeta">
-      <h3>Atención Prehospitalaria Nivel Básico</h3>
-      <p><strong>Temario:</strong></p>
-      <ul style="text-align:left;">
-        <li>Evaluación Primaria</li>
-        <li>Soporte Vital Básico</li>
-        <li>Obstrucción de la Vía Aérea</li>
-        <li>Reanimación Cardio Pulmonar</li>
-        <li>Evaluación Secundaria</li>
-        <li>Hemorragias</li>
-        <li>Vendajes</li>
-        <li>Quemaduras</li>
-      </ul>
-    </div>
-
-    <div class="tarjeta">
-      <h3>Prevención, Combate y Extinción de Incendios</h3>
-      <p><strong>Temario:</strong></p>
-      <ul style="text-align:left;">
-        <li>Revisión de los Protocolos de Actuación</li>
-        <li>Teoría del Fuego</li>
-        <li>Formas de Propagación</li>
-        <li>Fases del Fuego</li>
-        <li>Identificación de Áreas de Riesgo de Incendio</li>
-        <li>Métodos de Extinción del Fuego</li>
-        <li>Extintores Portátiles</li>
-        <li>Combate del Incendio</li>
-      </ul>
-    </div>
-  </div>
 </section>
-  
+
 <section id="contacto">
   <h2 class="titulo-seccion">Contacto</h2>
   <p>Escríbenos para una asesoría personalizada.</p>
@@ -290,13 +248,28 @@ footer {
   </p>
 </section>
 
-<a href="https://wa.me/525611675838" class="whatsapp" target="_blank">
-  WhatsApp
-</a>
+<!-- ================================================= -->
+<!-- 🔵 INICIO MODIFICACIÓN — BOTONES FLOTANTES HTML -->
+<!-- ================================================= -->
+
+<div class="botones-flotantes">
+  <a href="mailto:estebanproteccioncivil@gmail.com" class="correo">
+    Correo
+  </a>
+
+  <a href="https://wa.me/525611675838" class="whatsapp" target="_blank">
+    WhatsApp
+  </a>
+</div>
+
+<!-- ================================================= -->
+<!-- 🔵 FIN MODIFICACIÓN — BOTONES FLOTANTES HTML -->
+<!-- ================================================= -->
 
 <footer>
-SHIELD Prevention MX 2026 © | Todos los derechos reservados
+  © 2026 SHIELD Prevention MX - Todos los derechos reservados
 </footer>
 
 </body>
 </html>
+
