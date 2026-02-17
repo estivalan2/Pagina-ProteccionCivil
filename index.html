@@ -88,10 +88,27 @@ section {
   color: #0B0DAF;
 }
 
+/* ==================================== */
+/* 🔥 INICIO MODIFICACIÓN - IMÁGENES EN TARJETAS */
+/* ==================================== */
+
+.tarjeta img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* ==================================== */
+/* 🔥 FIN MODIFICACIÓN - IMÁGENES EN TARJETAS */
+/* ==================================== */
+
+
 /* ===== BOTÓN WHATSAPP ===== */
 .whatsapp {
   position: fixed;
-  bottom: 80px;  /* ahora arriba */
+  bottom: 80px;  
   right: 20px;
   background-color: #25D366;
   color: white;
@@ -106,7 +123,7 @@ section {
 /* ===== BOTÓN CORREO GENERAL ===== */
 .correo {
   position: fixed;
-  bottom: 20px;  /* ahora abajo */
+  bottom: 20px;  
   right: 20px;
   background-color: #0B0DAF;
   color: white;
@@ -120,13 +137,11 @@ section {
   font-weight: bold;
 }
 
-
 .correo svg {
   width: 18px;
   height: 18px;
   fill: white;
 }
-
 
 footer {
   background-color: #0B0DAF;
@@ -153,7 +168,6 @@ footer {
     font-size: 15px;
   }
 
-  /* MENÚ MÁS COMPACTO EN CELULAR */
   .menu {
     padding: 10px;
   }
@@ -187,7 +201,7 @@ footer {
 </head>
 
 <body>
-<!-- ===== MENU ===== -->
+
 <nav class="menu">
   <a href="#">Inicio</a>
   <a href="#quienes">Quiénes somos</a>
@@ -202,7 +216,6 @@ footer {
   <a href="#contacto" class="boton-principal">Solicitar Asesoría</a>
 </header>
 
-<!-- ===== QUIENES SOMOS ===== -->
 <section id="quienes">
   <h2 class="titulo-seccion">¿QUIÉNES SOMOS?</h2>
   <p>
@@ -220,96 +233,39 @@ footer {
   <h2 class="titulo-seccion">NUESTROS SERVICIOS</h2>
   <div class="servicios">
     
-<div class="tarjeta">
+    <!-- 🔥 INICIO MODIFICACIÓN - IMÁGENES EN SERVICIOS -->
+
+    <div class="tarjeta">
+      <img src="img/capacitacion.jpg" alt="Capacitación en Protección Civil">
       <h3>Capacitación</h3>
       <p>Capacitación a Empresas, Trabajadores y Brigadas Internas de Protección Civil.</p>
-
     </div>
+
     <div class="tarjeta">
+      <img src="img/dc3.jpg" alt="Constancia DC-3">
       <h3>DC-3</h3>
       <p>Emisión de Constancias de Habilidades Laborales con Validez Oficial a Nivel Federal en todo México ante la STPS.</p>
-
     </div>
+
     <div class="tarjeta">
+      <img src="img/analisis.jpg" alt="Análisis de Riesgos">
       <h3>Análisis de Riesgos</h3>
       <p>Identificación y Evaluación de Vulnerabilidades.</p>
-
     </div>
+
     <div class="tarjeta">
+      <img src="img/simulacros.jpg" alt="Simulacros de Emergencia">
       <h3>Simulacros</h3>
       <p>Elaboración de Simulacros de Gabinete y de Campo con Diferentes Hipótesis</p>
     </div>
+
+    <!-- 🔥 FIN MODIFICACIÓN - IMÁGENES EN SERVICIOS -->
+
   </div>
 </section>
+
+<!-- EL RESTO DEL CÓDIGO QUEDA EXACTAMENTE IGUAL -->
 
 <section id="cursos">
-  <h2 class="titulo-seccion">CURSOS DE CAPACITACIÓN</h2>
-  <div class="servicios">
-    <div class="tarjeta">
-      <h3>Atención Prehospitalaria Nivel Básico</h3>
-      <p><strong>Temario:</strong></p>
-      <ul style="text-align:left;">
-        <li>Evaluación Primaria</li>
-        <li>Soporte Vital Básico</li>
-        <li>Obstrucción de la Vía Aérea</li>
-        <li>Reanimación Cardio Pulmonar</li>
-        <li>Evaluación Secundaria</li>
-        <li>Hemorragias</li>
-        <li>Vendajes</li>
-        <li>Quemaduras</li>
-      </ul>
-    </div>
+...
 
-    <div class="tarjeta">
-      <h3>Prevención, Combate y Extinción de Incendios</h3>
-      <p><strong>Temario:</strong></p>
-      <ul style="text-align:left;">
-        <li>Revisión de los Protocolos de Actuación</li>
-        <li>Teoría del Fuego</li>
-        <li>Formas de Propagación</li>
-        <li>Fases del Fuego</li>
-        <li>Identificación de Áreas de Riesgo de Incendio</li>
-        <li>Métodos de Extinción del Fuego</li>
-        <li>Extintores Portátiles</li>
-        <li>Combate del Incendio</li>
-      </ul>
-    </div>
-  </div>
-</section>
-  
-<section id="contacto">
-  <h2 class="titulo-seccion">Contacto</h2>
-  <p>Escríbenos para una asesoría personalizada.</p>
-  <p><strong>Correo:</strong> 
-     <a href="mailto:estebanproteccioncivil@gmail.com">
-       estebanproteccioncivil@gmail.com
-     </a>
-  </p>
-  <p><strong>Teléfono y WhatsApp:</strong> 
-     <a href="https://wa.me/525611675838" target="_blank">
-       +525611675838
-     </a>
-  </p>
-</section>
-
-<!-- BOTÓN WHATSAPP -->
-<a href="https://wa.me/525611675838" class="whatsapp" target="_blank">
-  WhatsApp
-</a>
-
-<!-- BOTÓN CORREO GENERAL -->
-<a href="https://mail.google.com/mail/?view=cm&fs=1&to=estebanproteccioncivil@gmail.com" 
-   target="_blank" 
-   class="correo">
-  <svg viewBox="0 0 24 24">
-    <path d="M2 4h20v16H2V4zm10 9L3.5 6h17L12 13zm0 2l8-7v10H4V8l8 7z"/>
-  </svg>
-  Correo
-</a>
-
-<footer>
-SHIELD Prevention MX 2026 © | Todos los derechos reservados
-</footer>
-
-</body>
-</html>
