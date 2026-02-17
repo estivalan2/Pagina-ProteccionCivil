@@ -88,20 +88,11 @@ section {
   color: #0B0DAF;
 }
 
-/* ================================================= */
-/* 🔵 INICIO MODIFICACIÓN — BOTONES FLOTANTES */
-/* ================================================= */
-
-.botones-flotantes {
+/* ===== BOTÓN WHATSAPP ===== */
+.whatsapp {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  display: flex;
-  gap: 10px;
-  z-index: 1000;
-}
-
-.whatsapp {
   background-color: #25D366;
   color: white;
   padding: 15px 20px;
@@ -111,19 +102,28 @@ section {
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
+/* ===== BOTÓN CORREO GENERAL ===== */
 .correo {
+  position: fixed;
+  bottom: 80px; /* colocado arriba del WhatsApp */
+  right: 20px;
   background-color: #0B0DAF;
   color: white;
-  padding: 15px 20px;
+  padding: 12px 18px;
   border-radius: 50px;
   text-decoration: none;
-  font-weight: bold;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
 }
 
-/* ================================================= */
-/* 🔵 FIN MODIFICACIÓN — BOTONES FLOTANTES */
-/* ================================================= */
+.correo svg {
+  width: 18px;
+  height: 18px;
+  fill: white;
+}
 
 footer {
   background-color: #0B0DAF;
@@ -201,70 +201,30 @@ footer {
     Brindamos entrenamiento a empresas, trabajadores y brigadas internas
     para el cumplimiento de la normatividad en materia de Protección Civil.
   </p>
-  <p>
-    Nuestro equipo cuenta con experiencia operativa y formación profesional,
-    ofreciendo programas teóricos y prácticos adaptados a cada necesidad.
-  </p>
 </section>
 
 <section id="servicios">
   <h2 class="titulo-seccion">NUESTROS SERVICIOS</h2>
-  <div class="servicios">
-    <div class="tarjeta">
-      <h3>Capacitación</h3>
-      <p>Capacitación a Empresas, Trabajadores y Brigadas Internas de Protección Civil.</p>
-    </div>
-    <div class="tarjeta">
-      <h3>DC-3</h3>
-      <p>Emisión de Constancias de Habilidades Laborales con Validez Oficial a Nivel Federal en todo México ante la STPS.</p>
-    </div>
-    <div class="tarjeta">
-      <h3>Análisis de Riesgos</h3>
-      <p>Identificación y Evaluación de Vulnerabilidades.</p>
-    </div>
-    <div class="tarjeta">
-      <h3>Simulacros</h3>
-      <p>Elaboración de Simulacros de Gabinete y de Campo con Diferentes Hipótesis</p>
-    </div>
-  </div>
-</section>
-
-<section id="cursos">
-  <h2 class="titulo-seccion">CURSOS DE CAPACITACIÓN</h2>
 </section>
 
 <section id="contacto">
   <h2 class="titulo-seccion">Contacto</h2>
   <p>Escríbenos para una asesoría personalizada.</p>
-  <p><strong>Correo:</strong> 
-     <a href="mailto:estebanproteccioncivil@gmail.com">
-       estebanproteccioncivil@gmail.com
-     </a>
-  </p>
-  <p><strong>Teléfono y WhatsApp:</strong> 
-     <a href="https://wa.me/525611675838" target="_blank">
-       +525611675838
-     </a>
-  </p>
 </section>
 
-<!-- ================================================= -->
-<!-- 🔵 INICIO MODIFICACIÓN — BOTONES FLOTANTES HTML -->
-<!-- ================================================= -->
+<!-- BOTÓN WHATSAPP -->
+<a href="https://wa.me/525611675838" class="whatsapp" target="_blank">
+  WhatsApp
+</a>
 
-<div class="botones-flotantes">
-  <a href="mailto:estebanproteccioncivil@gmail.com" class="correo">
-    Correo
-  </a>
-
-  <a href="https://wa.me/525611675838" class="whatsapp" target="_blank">
-    WhatsApp
-  </a>
-</div>
-
-<!-- ================================================= -->
-<!-- 🔵 FIN MODIFICACIÓN — BOTONES FLOTANTES HTML -->
-<!-- ================================================= -->
+<!-- BOTÓN CORREO GENERAL -->
+<a href="mailto:estebanproteccioncivil@gmail.com" class="correo">
+  <!-- Ícono SVG de sobre -->
+  <svg viewBox="0 0 24 24">
+    <path d="M2 4h20v16H2V4zm10 9L3.5 6h17L12 13zm0 2l8-7v10H4V8l8 7z"/>
+  </svg>
+  Correo
+</a>
 
 <footer>
   © 2026 SHIELD Prevention MX - Todos los derechos reservados
@@ -272,4 +232,3 @@ footer {
 
 </body>
 </html>
-
