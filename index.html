@@ -153,6 +153,33 @@ footer {
   padding: 20px;
 }
 
+/* ===== SECCIÓN QUIÉNES SOMOS EN DOS COLUMNAS ===== */
+
+.quienes-contenido {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.quienes-texto {
+  flex: 1;
+  text-align: left;
+}
+
+.quienes-imagen {
+  flex: 1;
+}
+
+.quienes-imagen img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+
 /* ============================= */
 /* INICIO MODIFICACIÓN RESPONSIVE*/
 /* ==============================*/
@@ -171,7 +198,6 @@ footer {
     font-size: 15px;
   }
 
-  /* MENÚ MÁS COMPACTO EN CELULAR */
   .menu {
     padding: 10px;
   }
@@ -195,7 +221,18 @@ footer {
     font-size: 22px;
   }
 
+  /*  NUEVO RESPONSIVE QUIÉNES SOMOS */
+  .quienes-contenido {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .quienes-texto {
+    text-align: center;
+  }
+
 }
+
 
 /* ==================================== */
 /* =======  FIN DEL RESPONSIVE  ======= */
@@ -221,18 +258,33 @@ footer {
 </header>
 
 <!-- ===== QUIENES SOMOS ===== -->
+
 <section id="quienes">
   <h2 class="titulo-seccion">¿QUIÉNES SOMOS?</h2>
-  <p>
-    Somos especialistas en prevención de riesgos y capacitación en emergencias.
-    Brindamos entrenamiento a empresas, trabajadores y brigadas internas
-    para el cumplimiento de la normatividad en materia de Protección Civil.
-  </p>
-  <p>
-    Nuestro equipo cuenta con experiencia operativa y formación profesional,
-    ofreciendo programas teóricos y prácticos adaptados a cada necesidad.
-  </p>
+
+  <div class="quienes-contenido">
+
+    <!-- IMAGEN IZQUIERDA -->
+    <div class="quienes-imagen">
+      <img src="img/quienes.jpg" alt="Capacitación en prevención de riesgos">
+    </div>
+
+    <!-- TEXTO DERECHA -->
+    <div class="quienes-texto">
+      <p>
+        Somos especialistas en prevención de riesgos y capacitación en emergencias.
+        Brindamos entrenamiento a empresas, trabajadores y brigadas internas
+        para el cumplimiento de la normatividad en materia de Protección Civil.
+      </p>
+      <p>
+        Nuestro equipo cuenta con experiencia operativa y formación profesional,
+        ofreciendo programas teóricos y prácticos adaptados a cada necesidad.
+      </p>
+    </div>
+
+  </div>
 </section>
+
 
 <section id="servicios">
   <h2 class="titulo-seccion">NUESTROS SERVICIOS</h2>
@@ -335,5 +387,3 @@ SHIELD Prevention MX 2026 © | Todos los derechos reservados
 
 </body>
 </html>
-
-
