@@ -265,6 +265,39 @@ text-align: center;
 color: #0B0DAF;
 }
 
+/* ===== SELLO E ICONO ===== */
+.sello-cumplimiento {
+display: flex;
+justify-content: center;
+margin-bottom: 25px;
+}
+
+.sello-cumplimiento img {
+width: 100px;
+}
+
+/* ===== ANIMACIONES ===== */
+
+@keyframes fadeInUp {
+0% {
+opacity: 0;
+transform: translateY(30px);
+}
+100% {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+.animar-entrada {
+opacity: 0;
+animation: fadeInUp 0.9s ease forwards;
+}
+
+.animar-visible {
+opacity: 1;
+}
+
 /* ============================= */
 /* INICIO MODIFICACIÓN RESPONSIVE*/
 /* ==============================*/
@@ -438,15 +471,21 @@ color: #0B0DAF;
  
 
 <section class="seccion-legal">
-<div class="documento-legal">
+<div class="documento-legal animar-entrada" id="legal-doc">
 
-<div class="encabezado-legal">
-<h2 class="titulo-legal">¿POR QUÉ CAPACITAR A TU PERSONAL?</h2>
-<div class="subtitulo-alarma">(EVITA SANCIONES)</div>
-<div class="leyenda-institucional">
-Fundamento jurídico conforme a la Ley Federal del Trabajo vigente en México.
-</div>
-</div>
+  <!-- 🛡 SELLO INSTITUCIONAL -->
+  <div class="sello-cumplimiento">
+    <img src="img/sello-cumplimiento.png" alt="Cumplimiento Normativo">
+  </div>
+
+  <div class="encabezado-legal">
+    <h2 class="titulo-legal">¿POR QUÉ CAPACITAR A TU PERSONAL?</h2>
+    <div class="subtitulo-alarma">(EVITA SANCIONES)</div>
+    <div class="leyenda-institucional">
+      Fundamento jurídico conforme a la Ley Federal del Trabajo vigente en México.
+    </div>
+  </div>
+
 
 <div class="bloque-legal">
 En México es obligación que los patrones capaciten a sus trabajadores en materia de prevención y seguridad,
@@ -497,6 +536,12 @@ especialmente aquellas relacionadas con prevención de riesgos, seguridad e higi
 Multa de 250 a 5000 veces la Unidad de Medida y Actualización (UMA)
 por incumplimiento del artículo 132 fracción XV.
 </div>
+
+<div class="bloque-legal" style="background:#eef4ff; padding:20px; border-left:4px solid #0B0DAF; border-radius:6px; margin-top:20px;">
+  <strong>💰 Conversión real de sanción:</strong><br>
+  Una multa de <strong>5000 UMA</strong> equivale aproximadamente a <strong>$586,550 MXN</strong> conforme al valor oficial de la UMA para 2026.
+</div>
+
 
 <div class="bloque-legal">
 <h4>En caso de Accidente de Trabajo</h4>
@@ -554,6 +599,25 @@ y la base de una cultura preventiva sólida.
 <footer>
 SHIELD Prevention MX 2026 © | Todos los derechos reservados
 </footer>
+
+<footer>
+SHIELD Prevention MX 2026 © | Todos los derechos reservados
+</footer>
+
+<script>
+window.addEventListener("scroll", function() {
+const doc = document.getElementById("legal-doc");
+
+if (!doc) return; // evita error si no existe
+
+const pos = doc.getBoundingClientRect().top;
+const screenPos = window.innerHeight / 1.2;
+
+if (pos < screenPos) {
+doc.classList.add("animar-visible");
+}
+});
+</script>
 
 </body>
 </html>
