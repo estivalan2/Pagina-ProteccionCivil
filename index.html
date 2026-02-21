@@ -94,17 +94,10 @@ section {
 
 .tarjeta img {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
   border-radius: 10px;
-  margin-bottom: 15px;
-}
-
-.tarjeta img {
-width: 100%;
-height: auto; /* quitamos el alto fijo */
-border-radius: 10px;
-margin: 15px 0;
+  margin: 15px 0;
 }
   
 /* ==================================== */
@@ -460,8 +453,10 @@ transform: translateY(0);
         <li>Vendajes</li>
         <li>Quemaduras</li>
       </ul>
-      <img src="img/estrella.jpg" alt="Atencion Prehospitalaria">
-    </div>
+      <img src="img/estrella.jpg" alt="Atención Prehospitalaria">
+      </div> 
+   <div class="tarjeta">
+
 
     <div class="tarjeta">
       <h3>Prevención, Combate y Extinción de Incendios</h3>
