@@ -9,8 +9,10 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background-color: #f4f6fa;
 }
 
+/* ===== MENÚ ===== */
 header {
   background: #0B0DAF;
   padding: 15px 40px;
@@ -27,12 +29,77 @@ header {
   text-decoration: underline;
 }
 
-.contenido {
-  padding: 60px 40px;
+/* ===== SECCIÓN CONTACTO ===== */
+.seccion-contacto {
+  padding: 80px 20px;
+  text-align: center;
 }
 
-h1 {
+.titulo-seccion {
+  font-size: 30px;
+  margin-bottom: 20px;
   color: #0B0DAF;
+}
+
+.caja-contacto {
+  background: white;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.caja-contacto p {
+  font-size: 18px;
+  margin: 15px 0;
+}
+
+.caja-contacto a {
+  color: #0B0DAF;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.caja-contacto a:hover {
+  text-decoration: underline;
+}
+
+/* ===== BOTÓN WHATSAPP FLOTANTE ===== */
+.whatsapp {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* ===== BOTÓN CORREO FLOTANTE ===== */
+.correo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #0B0DAF;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #0B0DAF;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
 }
 </style>
 
@@ -41,7 +108,7 @@ h1 {
 
 <header>
   <nav class="menu">
-    <a href="índice.html">Inicio</a>
+    <a href="index.html">Inicio</a>
     <a href="quienes.html">Quiénes somos</a>
     <a href="servicios.html">Servicios</a>
     <a href="cursos.html">Cursos</a>
@@ -51,10 +118,41 @@ h1 {
   </nav>
 </header>
 
-<section class="contenido">
-  <h1>Beneficios</h1>
-  <p>Garantizamos cumplimiento legal, reducción de riesgos y protección integral para tu empresa.</p>
+<section class="seccion-contacto">
+  <h2 class="titulo-seccion">Contacto</h2>
+
+  <div class="caja-contacto">
+    <p>Escríbenos para una asesoría personalizada.</p>
+
+    <p>
+      <strong>Correo:</strong><br>
+      <a href="mailto:estebanproteccioncivil@gmail.com">
+        estebanproteccioncivil@gmail.com
+      </a>
+    </p>
+
+    <p>
+      <strong>Teléfono y WhatsApp:</strong><br>
+      <a href="https://wa.me/525611675838" target="_blank">
+        +52 561 167 5838
+      </a>
+    </p>
+  </div>
 </section>
+
+<!-- BOTÓN WHATSAPP -->
+<a href="https://wa.me/525611675838" class="whatsapp" target="_blank">
+  WhatsApp
+</a>
+
+<!-- BOTÓN CORREO -->
+<a href="mailto:estebanproteccioncivil@gmail.com" class="correo">
+  Correo
+</a>
+
+<footer>
+PREVENtion Shield 360 © 2026 | Todos los derechos reservados
+</footer>
 
 </body>
 </html>
