@@ -10,18 +10,25 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #f4f6fa;
+  padding-top: 70px;   /* espacio para menú fijo */
+  padding-bottom: 90px; /* espacio para footer fijo */
 }
 
-/* ===== MENÚ ===== */
-header {
-  background: #0B0DAF;
-  padding: 15px 40px;
+/* ===== MENU FIJO ===== */
+.menu {
+  background-color: #FF6600;
+  padding: 15px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .menu a {
-  color: white;
-  margin-right: 20px;
+  margin: 0 15px;
   text-decoration: none;
+  color: white;
   font-weight: bold;
 }
 
@@ -65,10 +72,10 @@ header {
   text-decoration: underline;
 }
 
-/* ===== BOTÓN WHATSAPP FLOTANTE ===== */
+/* ===== BOTÓN WHATSAPP ===== */
 .whatsapp {
   position: fixed;
-  bottom: 80px;
+  bottom: 140px;
   right: 20px;
   background-color: #25D366;
   color: white;
@@ -79,10 +86,10 @@ header {
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-/* ===== BOTÓN CORREO FLOTANTE ===== */
+/* ===== BOTÓN CORREO ===== */
 .correo {
   position: fixed;
-  bottom: 20px;
+  bottom: 80px;
   right: 20px;
   background-color: #0B0DAF;
   color: white;
@@ -93,31 +100,34 @@ header {
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-/* ===== FOOTER ===== */
+/* ===== FOOTER FIJO ===== */
 footer {
   background-color: #0B0DAF;
   color: white;
   text-align: center;
   padding: 20px;
-  margin-top: 60px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
 }
 </style>
 
 </head>
 <body>
 
-<header>
-  <nav class="menu">
-    <a href="index.html">Inicio</a>
-    <a href="quienes.html">Quiénes somos</a>
-    <a href="servicios.html">Servicios</a>
-    <a href="cursos.html">Cursos</a>
-    <a href="beneficios.html">Beneficios</a>
-    <a href="importancia.html">Importancia de la capacitación</a>
-    <a href="contacto.html">Contacto</a>
-  </nav>
-</header>
+<!-- ===== MENU ===== -->
+<nav class="menu">
+  <a href="index.html">Inicio</a>
+  <a href="quienes.html">Quiénes somos</a>
+  <a href="servicios.html">Servicios</a>
+  <a href="cursos.html">Cursos</a>
+  <a href="beneficios.html">Beneficios</a>
+  <a href="importancia.html">Importancia</a>
+  <a href="contacto.html">Contacto</a>
+</nav>
 
+<!-- ===== CONTENIDO ===== -->
 <section class="seccion-contacto">
   <h2 class="titulo-seccion">Contacto</h2>
 
@@ -140,18 +150,20 @@ footer {
   </div>
 </section>
 
-<!-- BOTÓN WHATSAPP -->
+<!-- ===== BOTONES FLOTANTES ===== -->
 <a href="https://wa.me/525611675838" class="whatsapp" target="_blank">
   WhatsApp
 </a>
 
-<!-- BOTÓN CORREO -->
-<a href="mailto:estebanproteccioncivil@gmail.com" class="correo">
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=estebanproteccioncivil@gmail.com" 
+   target="_blank" 
+   class="correo">
   Correo
 </a>
 
+<!-- ===== FOOTER ===== -->
 <footer>
-PREVENtion Shield 360 © 2026 | Todos los derechos reservados
+SHIELD Prevention MX 2026 © | Todos los derechos reservados
 </footer>
 
 </body>
