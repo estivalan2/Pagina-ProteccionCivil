@@ -9,8 +9,10 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background-color: #f4f6fa;
 }
 
+/* ===== MENU ===== */
 header {
   background: #0B0DAF;
   padding: 15px 40px;
@@ -27,12 +29,63 @@ header {
   text-decoration: underline;
 }
 
-.contenido {
-  padding: 60px 40px;
+/* ===== SECCIÓN ===== */
+section {
+  padding: 60px 20px;
+  text-align: center;
 }
 
-h1 {
+.titulo-seccion {
+  font-size: 30px;
+  margin-bottom: 40px;
   color: #0B0DAF;
+}
+
+.beneficios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.tarjeta {
+  background: white;
+  padding: 30px;
+  width: 320px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+}
+
+.tarjeta h3 {
+  color: #0B0DAF;
+  margin-top: 0;
+}
+
+.tarjeta img {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .beneficios {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tarjeta {
+    width: 95%;
+  }
+
+  .titulo-seccion {
+    font-size: 22px;
+  }
 }
 </style>
 
@@ -51,9 +104,33 @@ h1 {
   </nav>
 </header>
 
-<section class="contenido">
-  <h1>Beneficios</h1>
-  <p>Garantizamos cumplimiento legal, reducción de riesgos y protección integral para tu empresa.</p>
+<section>
+  <h2 class="titulo-seccion">BENEFICIOS</h2>
+
+  <div class="beneficios">
+
+    <!-- BENEFICIO 1 -->
+    <div class="tarjeta">
+      <img src="img/verificacion.png" alt="Cumplimiento legal">
+      <h3>Cumplimiento Legal</h3>
+      <p>Garantizamos que tu empresa cumpla con la normatividad vigente en materia de Protección Civil.</p>
+    </div>
+
+    <!-- BENEFICIO 2 -->
+    <div class="tarjeta">
+      <img src="img/escudo.png" alt="Reducción de riesgos">
+      <h3>Reducción de Riesgos</h3>
+      <p>Identificamos y mitigamos riesgos para proteger a tu personal e instalaciones.</p>
+    </div>
+
+    <!-- BENEFICIO 3 -->
+    <div class="tarjeta">
+      <img src="img/certificado.png" alt="Capacitación certificada">
+      <h3>Capacitación Certificada</h3>
+      <p>Entrenamos a tus brigadas con estándares profesionales y enfoque práctico.</p>
+    </div>
+
+  </div>
 </section>
 
 </body>
