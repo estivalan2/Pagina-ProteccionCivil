@@ -9,8 +9,10 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background-color: #f4f6fa;
 }
 
+/* ===== MENU ===== */
 header {
   background: #0B0DAF;
   padding: 15px 40px;
@@ -27,12 +29,54 @@ header {
   text-decoration: underline;
 }
 
-.contenido {
-  padding: 60px 40px;
+/* ===== SECCIÓN QUIÉNES ===== */
+section {
+  padding: 60px 20px;
 }
 
-h1 {
+.titulo-seccion {
+  font-size: 30px;
+  margin-bottom: 40px;
   color: #0B0DAF;
+  text-align: center;
+}
+
+.quienes-contenido {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.quienes-texto {
+  flex: 1;
+  text-align: justify;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.quienes-imagen {
+  flex: 1;
+}
+
+.quienes-imagen img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .quienes-contenido {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .quienes-texto {
+    text-align: justify;
+  }
 }
 </style>
 
@@ -51,9 +95,31 @@ h1 {
   </nav>
 </header>
 
-<section class="contenido">
-  <h1>¿Quiénes somos?</h1>
-  <p>Garantizamos cumplimiento legal, reducción de riesgos y protección integral para tu empresa.</p>
+<section>
+  <h2 class="titulo-seccion">¿QUIÉNES SOMOS?</h2>
+
+  <div class="quienes-contenido">
+
+    <!-- IMAGEN -->
+    <div class="quienes-imagen">
+      <img src="img/quienes.jpg" alt="Capacitación en prevención de riesgos">
+    </div>
+
+    <!-- TEXTO -->
+    <div class="quienes-texto">
+      <p>
+        Somos especialistas en prevención de riesgos y capacitación en emergencias.
+        Brindamos entrenamiento a empresas, trabajadores y brigadas internas
+        para el cumplimiento de la normatividad en materia de Protección Civil.
+      </p>
+
+      <p>
+        Nuestro equipo cuenta con experiencia operativa y formación profesional,
+        ofreciendo programas teóricos y prácticos adaptados a cada necesidad.
+      </p>
+    </div>
+
+  </div>
 </section>
 
 </body>
