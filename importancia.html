@@ -3,14 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Importancia | PrevMX</title>
+<title>Importancia de la Capacitación | PrevMX</title>
 
 <style>
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background-color: #f4f6fa;
 }
 
+/* ===== MENU ===== */
 header {
   background: #0B0DAF;
   padding: 15px 40px;
@@ -27,16 +29,109 @@ header {
   text-decoration: underline;
 }
 
-.contenido {
-  padding: 60px 40px;
+/* ===== DOCUMENTO LEGAL ===== */
+.seccion-legal {
+  background: linear-gradient(to bottom, #f4f6fa, #e9edff);
+  padding: 90px 20px;
 }
 
-h1 {
+.documento-legal {
+  background: #ffffff;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  border-top: 6px solid #0B0DAF;
+}
+
+.encabezado-legal {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.titulo-legal {
+  font-size: 32px;
+  color: #0B0DAF;
+  margin-bottom: 10px;
+}
+
+.subtitulo-alarma {
+  color: #c40000;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.leyenda-institucional {
+  font-size: 13px;
+  color: #666;
+  margin-top: 15px;
+}
+
+.bloque-legal {
+  margin-bottom: 35px;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.bloque-legal h4 {
+  color: #0B0DAF;
+  margin-bottom: 10px;
+}
+
+.articulo {
+  background: #f8f9ff;
+  padding: 18px;
+  border-left: 4px solid #0B0DAF;
+  margin-top: 10px;
+  border-radius: 6px;
+}
+
+.caja-sancion {
+  background: #fff0f0;
+  border-left: 6px solid #c40000;
+  padding: 25px;
+  border-radius: 8px;
+  margin: 30px 0;
+}
+
+.caja-sancion strong {
+  color: #c40000;
+}
+
+.frase-final {
+  margin-top: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
   color: #0B0DAF;
 }
-</style>
 
+/* ===== ANIMACIÓN ===== */
+.animar-entrada {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.9s ease;
+}
+
+.animar-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .documento-legal {
+    padding: 30px;
+  }
+
+  .titulo-legal {
+    font-size: 22px;
+  }
+}
+</style>
 </head>
+
 <body>
 
 <header>
@@ -51,10 +146,99 @@ h1 {
   </nav>
 </header>
 
-<section class="contenido">
-  <h1>Beneficios</h1>
-  <p>Garantizamos cumplimiento legal, reducción de riesgos y protección integral para tu empresa.</p>
+<section class="seccion-legal">
+<div class="documento-legal animar-entrada" id="legal-doc">
+
+  <div class="encabezado-legal">
+    <h2 class="titulo-legal">¿POR QUÉ CAPACITAR A TU PERSONAL?</h2>
+    <div class="subtitulo-alarma">(EVITA SANCIONES)</div>
+    <div class="leyenda-institucional">
+      Fundamento jurídico conforme a la Ley Federal del Trabajo vigente en México.
+    </div>
+  </div>
+
+  <div class="bloque-legal">
+    En México es obligación que los patrones capaciten a sus trabajadores en materia de prevención y seguridad,
+    conforme a lo dispuesto por la <strong>Ley Federal del Trabajo</strong>.
+    La capacitación no es opcional: es un mandato legal.
+  </div>
+
+  <div class="bloque-legal">
+    <h4>Capítulo I: Obligaciones de los Patrones</h4>
+    <div class="articulo">
+      <strong>Artículo 132 fracción XV.</strong>
+      Es obligación del patrón proporcionar capacitación y adiestramiento a sus trabajadores.
+    </div>
+  </div>
+
+  <div class="bloque-legal">
+    <h4>Capítulo III BIS: Productividad, Formación y Capacitación</h4>
+
+    <div class="articulo">
+      <strong>Artículo 153-A.</strong>
+      El patrón tiene la obligación de capacitar a su personal y éstos a recibir el adiestramiento que eleve su nivel de vida.
+    </div>
+
+    <div class="articulo">
+      <strong>Artículo 153-C fracción II.</strong>
+      La capacitación debe informar sobre los riesgos a los que están expuestos los trabajadores
+      y las normas oficiales mexicanas aplicables para prevenir riesgos laborales.
+    </div>
+  </div>
+
+  <div class="bloque-legal">
+    <h4>Facultades de Inspección</h4>
+    <div class="articulo">
+      <strong>Artículo 541 fracción I.</strong>
+      Los Inspectores del Trabajo pueden vigilar el cumplimiento de las normas.
+    </div>
+  </div>
+
+  <div class="caja-sancion">
+    <strong>INCUMPLIMIENTO = SANCIÓN ECONÓMICA</strong><br><br>
+    <strong>Artículo 992.</strong> Las violaciones serán sancionadas conforme a la Ley.<br><br>
+    <strong>Artículo 994 fracción IV.</strong>
+    Multa de 250 a 5000 veces la Unidad de Medida y Actualización (UMA).
+  </div>
+
+  <div class="bloque-legal" style="background:#eef4ff; padding:20px; border-left:4px solid #0B0DAF; border-radius:6px; margin-top:20px;">
+    <strong>💰 Conversión real de sanción:</strong><br>
+    Una multa de <strong>5000 UMA</strong> equivale aproximadamente a <strong>$586,550 MXN</strong> conforme al valor oficial de la UMA para 2026.
+  </div>
+
+  <div class="bloque-legal">
+    <h4>En caso de Accidente de Trabajo</h4>
+    <div class="articulo">
+      <strong>Artículos 473 y 474.</strong> Definen los riesgos y accidentes de trabajo.
+    </div>
+    <div class="articulo">
+      <strong>Artículo 488.</strong> Obliga al patrón a prestar los primeros auxilios.
+    </div>
+  </div>
+
+  <div class="frase-final">
+    La capacitación no es un gasto.  
+    Es una obligación legal, una responsabilidad empresarial  
+    y la base de una cultura preventiva sólida.
+  </div>
+
+</div>
 </section>
+
+<script>
+function activarAnimacion() {
+  const doc = document.getElementById("legal-doc");
+  const pos = doc.getBoundingClientRect().top;
+  const screenPos = window.innerHeight * 0.85;
+
+  if (pos < screenPos) {
+    doc.classList.add("animar-visible");
+  }
+}
+
+window.addEventListener("scroll", activarAnimacion);
+window.addEventListener("load", activarAnimacion);
+</script>
 
 </body>
 </html>
