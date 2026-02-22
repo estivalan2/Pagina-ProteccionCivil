@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Beneficios | PrevMX</title>
+<title>Cursos | PrevMX</title>
 
 <style>
 body {
@@ -41,7 +41,7 @@ section {
   color: #0B0DAF;
 }
 
-.beneficios {
+.servicios {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -55,26 +55,25 @@ section {
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
   text-align: left;
-  transition: transform 0.3s ease;
-}
-
-.tarjeta:hover {
-  transform: translateY(-5px);
 }
 
 .tarjeta h3 {
   color: #0B0DAF;
-  margin-top: 0;
+}
+
+.tarjeta ul {
+  padding-left: 18px;
 }
 
 .tarjeta img {
-  width: 60px;
-  margin-bottom: 15px;
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 10px;
 }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-  .beneficios {
+  .servicios {
     flex-direction: column;
     align-items: center;
   }
@@ -94,7 +93,7 @@ section {
 
 <header>
   <nav class="menu">
-    <a href="index.html">Inicio</a>
+    <a href="índice.html">Inicio</a>
     <a href="quienes.html">Quiénes somos</a>
     <a href="servicios.html">Servicios</a>
     <a href="cursos.html">Cursos</a>
@@ -107,31 +106,8 @@ section {
 <section>
   <h2 class="titulo-seccion">BENEFICIOS</h2>
 
-  <div class="beneficios">
-
-    <!-- BENEFICIO 1 -->
-    <div class="tarjeta">
-      <img src="img/verificacion.png" alt="Cumplimiento legal">
-      <h3>Cumplimiento Legal</h3>
-      <p>Garantizamos que tu empresa cumpla con la normatividad vigente en materia de Protección Civil.</p>
-    </div>
-
-    <!-- BENEFICIO 2 -->
-    <div class="tarjeta">
-      <img src="img/escudo.png" alt="Reducción de riesgos">
-      <h3>Reducción de Riesgos</h3>
-      <p>Identificamos y mitigamos riesgos para proteger a tu personal e instalaciones.</p>
-    </div>
-
-    <!-- BENEFICIO 3 -->
-    <div class="tarjeta">
-      <img src="img/certificado.png" alt="Capacitación certificada">
-      <h3>Capacitación Certificada</h3>
-      <p>Entrenamos a tus brigadas con estándares profesionales y enfoque práctico.</p>
-    </div>
-
-  </div>
-</section>
+  </section>
 
 </body>
 </html>
+
