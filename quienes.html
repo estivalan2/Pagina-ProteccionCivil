@@ -50,28 +50,34 @@ section {
   text-align: center;
 }
 
+/* ===== SECCIONES PROPORCIONALES ===== */
+
 .quienes-contenido {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 40px;
+  justify-content: space-between;
+  gap: 50px;
   max-width: 1100px;
   margin: 0 auto;
 }
 
 .quienes-texto {
   flex: 1;
+  font-size: 1.1rem;
+  line-height: 1.7;
   text-align: justify;
-  font-size: 16px;
-  line-height: 1.8;
 }
 
 .quienes-imagen {
   flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .quienes-imagen img {
   width: 100%;
+  max-width: 450px;
+  height: auto;
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
