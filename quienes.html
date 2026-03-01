@@ -31,6 +31,47 @@ body {
   margin-bottom: 8px;
 }
 
+/* ===== PROFESIONES ===== */
+
+.profesiones-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.profesiones-grid {
+  max-width: 1100px;
+  margin: 40px auto 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 60px;
+  justify-items: center;
+}
+
+.profesiones-grid img {
+  width: 100%;
+  max-width: 550px;   /* mantiene proporción 11:2 aprox */
+  aspect-ratio: 11 / 2;
+  object-fit: contain;
+}
+
+/* Última imagen centrada */
+.profesion-centro {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profesiones-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profesion-centro {
+    grid-column: auto;
+  }
+}
+  
 /* ===== MENU FIJO ===== */
 .menu {
   background-color: #FF6600;
@@ -224,6 +265,27 @@ footer {
 
     </ul>
     </div>
+
+    <section class="profesiones-section">
+  <h2 class="titulo-seccion">PROFESIONES DE NUESTRO EQUIPO DE TRABAJO</h2>
+
+  <div class="profesiones-grid">
+
+    <!-- Fila 1 -->
+    <img src="img/tecnico-proteccion-civil.png" alt="Técnicos en Protección Civil">
+    <img src="img/paramedico.png" alt="Paramédicos">
+
+    <!-- Fila 2 -->
+    <img src="img/bombero.png" alt="Bomberos">
+    <img src="img/brigadista.png" alt="Brigadistas">
+
+    <!-- Imagen centrada -->
+    <div class="profesion-centro">
+      <img src="img/rescatista.png" alt="Rescatistas">
+    </div>
+
+  </div>
+</section>
 
     <!-- IMAGEN DERECHA -->
     <div class="quienes-imagen">
