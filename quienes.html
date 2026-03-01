@@ -19,10 +19,12 @@ body {
 }
 
 .lista-centro {
-  list-style-position: inside;
-  text-align: center;
+  list-style: none;        /* Quita viñetas si no las quieres */
+  max-width: 400px;        /* Controla ancho del bloque */
+  margin: 20px auto;       /* Centra el bloque horizontalmente */
   padding: 0;
-  margin-top: 15px;
+  text-align: left;        /* Alinea texto a la izquierda */
+  font-weight: 600;
 }
 
 .lista-centro li {
