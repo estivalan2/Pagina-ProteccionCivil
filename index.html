@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PrevMX</title>
@@ -8,54 +9,67 @@
 <style>
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f4f6fa;
+  font-family: 'Poppins', sans-serif;
+  background: #f4f6fa;
+  color: #1a1a1a;
 }
 
 /* ===== MENU SUPERIOR ===== */
 .menu {
-  background-color: #FF6600; /* mismo naranja del botón */
+  background: rgba(11, 13, 175, 0.85);
+  backdrop-filter: blur(10px);
   padding: 15px;
   text-align: center;
   position: sticky;
   top: 0;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 
 .menu a {
   margin: 0 15px;
   text-decoration: none;
-  color: white; /* ahora blanco para que contraste */
-  font-weight: bold;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  color: #FF6600;
 }
 
 header {
-  background: linear-gradient(135deg, #0B0DAF, #1d20d6);
+  background: linear-gradient(rgba(11,13,175,0.85), rgba(11,13,175,0.9)),
+              url('img/hero.jpg');
+  background-size: cover;
+  background-position: center;
   color: white;
-  padding: 80px 20px;
+  padding: 120px 20px;
   text-align: center;
 }
 
 header h1 {
-  margin: 0;
-  font-size: 40px;
+  font-size: 48px;
+  font-weight: 700;
 }
 
 header p {
-  font-size: 18px;
-  margin-top: 10px;
+  font-size: 20px;
+  opacity: 0.9;
+  
+.boton-principal {
+  background: linear-gradient(135deg, #FF6600, #ff8533);
+  color: white;
+  padding: 15px 35px;
+  border-radius: 50px;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 25px;
+  transition: all 0.3s ease;
 }
 
-.boton-principal {
-  background-color: #FF6600;
-  color: white;
-  padding: 15px 30px;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: bold;
-  display: inline-block;
-  margin-top: 20px;
+.boton-principal:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255,102,0,0.4);
 }
 
 section {
@@ -64,9 +78,10 @@ section {
 }
 
 .titulo-seccion {
-  font-size: 30px;
+  font-size: 34px;
   margin-bottom: 40px;
   color: #0B0DAF;
+  font-weight: 700;
 }
 
 .servicios {
@@ -80,12 +95,14 @@ section {
   background: white;
   padding: 30px;
   width: 280px;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
 }
 
-.tarjeta h3 {
-  color: #0B0DAF;
+.tarjeta:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
 /* ==================================== */
@@ -389,18 +406,18 @@ transform: translateY(0);
 
 <!-- ===== PREVENtion Shield ===== -->
 
-<section id="quienes">
+<section id="quienes" class="animar-entrada">
   <h2 class="titulo-seccion">LA PREVENCIÓN SALVA MÁS QUE LA REACCIÓN</h2>
 
   <div class="quienes-contenido">
 
     <!-- IMAGEN IZQUIERDA -->
-    <div class="quienes-imagen">
+    <div class="quienes-imagen animar-entrada">
       <img src="img/prevencion.jpg" alt="prevencion.jpg">
     </div>
 
     <!-- TEXTO DERECHA -->
-    <div class="quienes-texto">
+    <div class="quienes-texto animar-entrada">
       <p>
        En la Ciudad de México convivimos con riesgos sísmicos, urbanos e hidrometeorológicos de manera constante. 
        Ante esta realidad, reaccionar es necesario, pero prevenir es decisivo.
@@ -417,7 +434,7 @@ transform: translateY(0);
   </div>
 </section>
 
-<section id="quienes">
+<section id="quienes" class="animar-entrada">
   <h2 class="titulo-seccion">CUANDO LA EMERGENCIA LLEGA, YA NO HAY TIEMPO PARA IMPROVISAR</h2>
 
   <div class="quienes-contenido">
@@ -468,20 +485,17 @@ SHIELD Prevention MX 2026 © | Todos los derechos reservados
 </footer>
 
 <script>
-function activarAnimacion() {
-  const doc = document.getElementById("legal-doc");
-  if (!doc) return;
+const elementos = document.querySelectorAll('.animar-entrada');
 
-  const pos = doc.getBoundingClientRect().top;
-  const screenPos = window.innerHeight * 0.85;
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('animar-visible');
+    }
+  });
+}, { threshold: 0.2 });
 
-  if (pos < screenPos) {
-    doc.classList.add("animar-visible");
-  }
-}
-
-window.addEventListener("scroll", activarAnimacion);
-window.addEventListener("load", activarAnimacion);
+elementos.forEach(el => observer.observe(el));
 </script>
 
 
