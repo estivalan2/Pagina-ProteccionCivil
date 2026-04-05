@@ -8,21 +8,22 @@
 <style>
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f4f6fa;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(to bottom, #f4f6fa, #ffffff);
   padding-top: 80px;
   padding-bottom: 100px;
 }
 
-/* ===== MENU FIJO ===== */
+/* ===== MENU ===== */
 .menu {
-  background-color: #FF6600;
+  background: linear-gradient(90deg, #FF6600, #ff8533);
   padding: 15px;
   text-align: center;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .menu a {
@@ -30,10 +31,11 @@ body {
   text-decoration: none;
   color: white;
   font-weight: bold;
+  transition: 0.3s;
 }
 
 .menu a:hover {
-  text-decoration: underline;
+  opacity: 0.7;
 }
 
 /* ===== CONTENIDO ===== */
@@ -44,62 +46,70 @@ body {
 
 h1 {
   color: #0B0DAF;
+  font-size: 36px;
+  margin-bottom: 40px;
 }
 
-/* ===== BLOQUES BENEFICIOS ===== */
+/* ===== BLOQUES ===== */
 .bloque {
   display: flex;
-  margin: 40px auto;
-  max-width: 1000px;
-  border: 2px solid #0B0DAF;
+  margin: 50px auto;
+  max-width: 1100px;
+  border-radius: 15px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.bloque:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
 }
 
 /* TEXTO */
 .texto {
   flex: 2;
-  padding: 20px;
+  padding: 30px;
   text-align: justify;
-  background-color: #f4f6fa;
+  line-height: 1.6;
+  font-size: 15px;
 }
 
 /* LADO NARANJA */
 .lado {
   flex: 1;
-  background-color: #FF6600;
-  color: black;
+  background: linear-gradient(135deg, #FF6600, #ff8533);
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 20px;
+  padding: 30px;
+  font-size: 20px;
   font-weight: bold;
 }
 
 /* IMÁGENES */
 .imagen {
-  max-width: 1000px;
-  margin: auto;
+  max-width: 1100px;
+  margin: 20px auto 50px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 .imagen img {
   width: 100%;
-  height: auto;
   display: block;
+  transition: transform 0.5s;
 }
 
-/* ===== FOOTER FIJO ===== */
-footer {
-  background-color: #0B0DAF;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  font-size: 14px;
+.imagen img:hover {
+  transform: scale(1.05);
 }
 
-/* ===== BOTÓN WHATSAPP ===== */
+/* ===== BOTONES ===== */
 .whatsapp {
   position: fixed;
   bottom: 150px;
@@ -111,9 +121,13 @@ footer {
   text-decoration: none;
   font-weight: bold;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: 0.3s;
 }
 
-/* ===== BOTÓN CORREO ===== */
+.whatsapp:hover {
+  transform: scale(1.1);
+}
+
 .correo {
   position: fixed;
   bottom: 90px;
@@ -125,12 +139,33 @@ footer {
   text-decoration: none;
   font-weight: bold;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: 0.3s;
 }
 
-/* RESPONSIVE */
+.correo:hover {
+  transform: scale(1.1);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: linear-gradient(90deg, #0B0DAF, #1c1fd1);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+}
+
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .bloque {
     flex-direction: column;
+  }
+
+  .lado {
+    font-size: 18px;
   }
 }
 </style>
@@ -138,7 +173,7 @@ footer {
 </head>
 <body>
 
-<!-- ===== MENU ===== -->
+<!-- MENU -->
 <nav class="menu">
   <a href="index.html">Inicio</a>
   <a href="quienes.html">Quiénes somos</a>
@@ -149,7 +184,7 @@ footer {
   <a href="contacto.html">Contacto</a>
 </nav>
 
-<!-- ===== CONTENIDO ===== -->
+<!-- CONTENIDO -->
 <section class="contenido">
   <h1>Beneficios</h1>
 
@@ -171,19 +206,20 @@ footer {
 
     <div class="lado">
       CAPACITACIÓN<br>
-      Directamente en tus Instalaciones
+      EN TUS INSTALACIONES
     </div>
   </div>
 
   <!-- IMAGEN 1 -->
   <div class="imagen">
-    <img src="capacitacion_instalaciones.jpg" alt="Capacitación en instalaciones">
+    <img src="capacitacion_instalaciones.jpg">
   </div>
 
   <!-- BLOQUE 2 -->
   <div class="bloque">
     <div class="lado">
-      PROGRAMA DE CAPACITACIÓN PERSONALIZADO
+      PROGRAMAS<br>
+      PERSONALIZADOS
     </div>
 
     <div class="texto">
@@ -205,17 +241,16 @@ footer {
 
   <!-- IMAGEN 2 -->
   <div class="imagen">
-    <img src="programa_personalizado.jpg" alt="Programa personalizado">
+    <img src="programa_personalizado.jpg">
   </div>
 
 </section>
 
-<!-- BOTÓN WHATSAPP -->
+<!-- BOTONES -->
 <a href="https://wa.me/525611675838" class="whatsapp" target="_blank">
   WhatsApp
 </a>
 
-<!-- BOTÓN CORREO -->
 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=estebanproteccioncivil@gmail.com" 
    target="_blank" 
    class="correo">
