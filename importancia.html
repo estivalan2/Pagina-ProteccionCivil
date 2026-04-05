@@ -10,8 +10,8 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #f4f6fa;
-  padding-top: 80px;     /* espacio para menú fijo */
-  padding-bottom: 110px; /* espacio para footer fijo */
+  padding-top: 80px;
+  padding-bottom: 110px;
 }
 
 /* ===== MENU FIJO ===== */
@@ -120,7 +120,19 @@ body {
   color: #0B0DAF;
 }
 
-/* ===== FOOTER FIJO ===== */
+/* ===== IMAGEN FINAL ===== */
+.imagen-final {
+  margin-top: 40px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.imagen-final img {
+  width: 100%;
+  display: block;
+}
+
+/* ===== FOOTER ===== */
 footer {
   background-color: #0B0DAF;
   color: white;
@@ -132,7 +144,7 @@ footer {
   font-size: 14px;
 }
 
-/* ===== BOTÓN WHATSAPP ===== */
+/* ===== BOTONES ===== */
 .whatsapp {
   position: fixed;
   bottom: 160px;
@@ -146,7 +158,6 @@ footer {
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-/* ===== BOTÓN CORREO ===== */
 .correo {
   position: fixed;
   bottom: 100px;
@@ -186,7 +197,7 @@ footer {
 
 <body>
 
-<!-- ===== MENU ===== -->
+<!-- MENU -->
 <nav class="menu">
   <a href="index.html">Inicio</a>
   <a href="quienes.html">Quiénes somos</a>
@@ -201,96 +212,34 @@ footer {
 <div class="documento-legal animar-entrada" id="legal-doc">
 
 <div class="encabezado-legal">
-  <img src="img/sello-cumplimiento.png" 
-       alt="Sello de Cumplimiento Normativo" 
-       class="sello-cumplimiento">
-
+  <img src="img/sello-cumplimiento.png" class="sello-cumplimiento">
   <h2 class="titulo-legal">¿POR QUÉ CAPACITAR A TU PERSONAL?</h2>
-   <div class="subtitulo-alarma">(EVITA SANCIONES)</div>
-
+  <div class="subtitulo-alarma">(EVITA SANCIONES)</div>
   <div class="leyenda-institucional">
     Fundamento jurídico conforme a la Ley Federal del Trabajo vigente en México.
   </div>
 </div>
-  <div class="bloque-legal">
-    En México es obligación que los patrones capaciten a sus trabajadores en materia de prevención y seguridad,
-    conforme a lo dispuesto por la <strong>Ley Federal del Trabajo</strong>.
-    La capacitación no es opcional: es un mandato legal.
-  </div>
 
-  <div class="bloque-legal">
-    <h4>Capítulo I: Obligaciones de los Patrones</h4>
-    <div class="articulo">
-      <strong>Artículo 132 fracción XV.</strong>
-      Es obligación del patrón proporcionar capacitación y adiestramiento a sus trabajadores.
-    </div>
-  </div>
+<!-- CONTENIDO -->
+<div class="bloque-legal">
+En México es obligación que los patrones capaciten a sus trabajadores conforme a la Ley Federal del Trabajo.
+</div>
 
-  <div class="bloque-legal">
-    <h4>Capítulo III BIS: Productividad, Formación y Capacitación</h4>
+<div class="frase-final">
+La capacitación no es un gasto. Es una obligación legal y una inversión estratégica.
+</div>
 
-    <div class="articulo">
-      <strong>Artículo 153-A.</strong>
-      El patrón tiene la obligación de capacitar a su personal y éstos a recibir el adiestramiento que eleve su nivel de vida.
-    </div>
-
-    <div class="articulo">
-      <strong>Artículo 153-C fracción II.</strong>
-      La capacitación debe informar sobre los riesgos a los que están expuestos los trabajadores
-      y las normas oficiales mexicanas aplicables para prevenir riesgos laborales.
-    </div>
-  </div>
-
-  <div class="bloque-legal">
-    <h4>Facultades de Inspección</h4>
-    <div class="articulo">
-      <strong>Artículo 541 fracción I.</strong>
-      Los Inspectores del Trabajo pueden vigilar el cumplimiento de las normas.
-    </div>
-  </div>
-
-  <div class="caja-sancion">
-    <strong>INCUMPLIMIENTO = SANCIÓN ECONÓMICA</strong><br><br>
-    <strong>Artículo 992.</strong> Las violaciones serán sancionadas conforme a la Ley.<br><br>
-    <strong>Artículo 994 fracción IV.</strong>
-    Multa de 250 a 5000 veces la Unidad de Medida y Actualización (UMA).
-  </div>
-
-  <div class="bloque-legal" style="background:#eef4ff; padding:20px; border-left:4px solid #0B0DAF; border-radius:6px; margin-top:20px;">
-    <strong>💰 Conversión real de sanción:</strong><br>
-    Una multa de <strong>5000 UMA</strong> equivale aproximadamente a <strong>$586,550 MXN</strong> conforme al valor oficial de la UMA para 2026.
-  </div>
-
-  <div class="bloque-legal">
-    <h4>En caso de Accidente de Trabajo</h4>
-    <div class="articulo">
-      <strong>Artículos 473 y 474.</strong> Definen los riesgos y accidentes de trabajo.
-    </div>
-    <div class="articulo">
-      <strong>Artículo 488.</strong> Obliga al patrón a prestar los primeros auxilios.
-    </div>
-  </div>
-
-  <div class="frase-final">
-    La capacitación no es un gasto.  
-    Es una obligación legal, una responsabilidad empresarial  
-    y la base de una cultura preventiva sólida.
-  </div>
+<!-- IMAGEN FINAL -->
+<div class="imagen-final">
+  <img src="ley.png" alt="Importancia legal de la capacitación">
+</div>
 
 </div>
 </section>
 
-
-<!-- BOTONES FLOTANTES -->
-<a href="https://wa.me/525611675838" class="whatsapp" target="_blank">
-  WhatsApp
-</a>
-
-<a href="https://mail.google.com/mail/?view=cm&fs=1&to=estebanproteccioncivil@gmail.com" 
-   target="_blank" 
-   class="correo">
-  Correo
-</a>
+<!-- BOTONES -->
+<a href="https://wa.me/525611675838" class="whatsapp" target="_blank">WhatsApp</a>
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=estebanproteccioncivil@gmail.com" class="correo" target="_blank">Correo</a>
 
 <!-- FOOTER -->
 <footer>
