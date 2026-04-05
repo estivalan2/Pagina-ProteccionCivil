@@ -10,8 +10,8 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #f4f6fa;
-  padding-top: 80px;    /* espacio para menú fijo */
-  padding-bottom: 100px; /* espacio para footer fijo */
+  padding-top: 80px;
+  padding-bottom: 100px;
 }
 
 /* ===== MENU FIJO ===== */
@@ -38,12 +38,53 @@ body {
 
 /* ===== CONTENIDO ===== */
 .contenido {
-  padding: 60px 40px;
+  padding: 60px 20px;
   text-align: center;
 }
 
 h1 {
   color: #0B0DAF;
+}
+
+/* ===== BLOQUES BENEFICIOS ===== */
+.bloque {
+  display: flex;
+  margin: 40px auto;
+  max-width: 1000px;
+  border: 2px solid #0B0DAF;
+}
+
+/* TEXTO */
+.texto {
+  flex: 2;
+  padding: 20px;
+  text-align: justify;
+  background-color: #f4f6fa;
+}
+
+/* LADO NARANJA */
+.lado {
+  flex: 1;
+  background-color: #FF6600;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  font-weight: bold;
+}
+
+/* IMÁGENES */
+.imagen {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.imagen img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* ===== FOOTER FIJO ===== */
@@ -85,6 +126,13 @@ footer {
   font-weight: bold;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .bloque {
+    flex-direction: column;
+  }
+}
 </style>
 
 </head>
@@ -101,11 +149,65 @@ footer {
   <a href="contacto.html">Contacto</a>
 </nav>
 
+<!-- ===== CONTENIDO ===== -->
 <section class="contenido">
   <h1>Beneficios</h1>
-  <p>
-    Garantizamos cumplimiento legal, reducción de riesgos y protección integral para tu empresa.
-  </p>
+
+  <!-- BLOQUE 1 -->
+  <div class="bloque">
+    <div class="texto">
+      <p>
+        Optimiza el tiempo y los recursos de tu organización evitando traslados innecesarios a centros de capacitación.
+      </p>
+
+      <p>
+        Nuestro servicio lleva la formación directamente a tus instalaciones: un instructor especializado se traslada a tu inmueble o establecimiento con todo el equipo y material necesario, brindando capacitaciones de alto nivel adaptadas a tus necesidades.
+      </p>
+
+      <p>
+        De esta manera, tu personal se capacita en su propio entorno laboral, facilitando el aprendizaje, la aplicación práctica y la continuidad operativa.
+      </p>
+    </div>
+
+    <div class="lado">
+      CAPACITACIÓN<br>
+      Directamente en tus Instalaciones
+    </div>
+  </div>
+
+  <!-- IMAGEN 1 -->
+  <div class="imagen">
+    <img src="capacitacion_instalaciones.jpg" alt="Capacitación en instalaciones">
+  </div>
+
+  <!-- BLOQUE 2 -->
+  <div class="bloque">
+    <div class="lado">
+      PROGRAMA DE CAPACITACIÓN PERSONALIZADO
+    </div>
+
+    <div class="texto">
+      <p><strong>¿Necesitas capacitar a tu personal en más de un tema?</strong></p>
+
+      <p>
+        En <strong>SHIELD Prevention</strong> lo hacemos fácil para ti. Diseñamos programas de capacitación totalmente personalizados, alineados a las necesidades reales de tu centro de trabajo y adaptados a los horarios de tu equipo.
+      </p>
+
+      <p>
+        Nos integramos a tu operación para que tu personal se capacite sin afectar sus actividades, asegurando una experiencia práctica, flexible y de alto impacto.
+      </p>
+
+      <p><strong>
+        Tú enfócate en tu operación, nosotros nos encargamos de la capacitación.
+      </strong></p>
+    </div>
+  </div>
+
+  <!-- IMAGEN 2 -->
+  <div class="imagen">
+    <img src="programa_personalizado.jpg" alt="Programa personalizado">
+  </div>
+
 </section>
 
 <!-- BOTÓN WHATSAPP -->
