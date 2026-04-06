@@ -130,6 +130,24 @@ body {
   text-decoration: underline;
 }
 
+/* ===== TARJETAS INFO ===== */
+.info-box {
+  background: rgba(255,255,255,0.15);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: 0.3s;
+}
+
+.info-box:hover {
+  transform: translateY(-3px);
+}
+
+/* ===== PROFUNDIDAD ===== */
+.info-contacto {
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+}
+
 /* ===== BOTONES ===== */
 .whatsapp {
   position: fixed;
@@ -222,32 +240,63 @@ footer {
     <div class="info-contacto">
   <h3>Contacto directo</h3>
 
+  <p style="color:#00ffcc; font-weight:bold;">
+  🟢 En línea ahora
+  </p>
+  
   <p style="font-size:14px; opacity:0.9;">
-    Estamos listos para ayudarte a cumplir con Protección Civil de forma rápida y profesional.
+  Estamos listos para ayudarte a cumplir con Protección Civil de forma rápida y profesional.
   </p>
 
-  <hr style="margin:20px 0; opacity:0.3;">
+  <hr style="margin:25px 0; opacity:0.3;">
 
-  <p>📧 <strong>Correo</strong><br>
-    <a href="mailto:estebanproteccioncivil@gmail.com">
-      estebanproteccioncivil@gmail.com
-    </a>
-  </p>
+  <!-- CONTADOR -->
+  <div style="display:flex; justify-content:space-between; margin:20px 0; text-align:center;">
+  <div>
+    <strong style="font-size:18px;">+150</strong><br>
+    Clientes
+  </div>
+  <div>
+    <strong style="font-size:18px;">+300</strong><br>
+    Capacitaciones
+  </div>
+  <div>
+    <strong style="font-size:18px;">100%</strong><br>
+    Cumplimiento
+  </div>
+</div>
 
-  <p>📱 <strong>Teléfono / WhatsApp</strong><br>
-    <a href="https://wa.me/525611675838" target="_blank">
-      +52 561 167 5838
-    </a>
+<div style="background:rgba(255,255,255,0.2); padding:15px; border-radius:10px; margin-top:20px;">
+  <p style="font-style:italic;">
+  "Excelente capacitación, nos ayudaron a cumplir con Protección Civil sin complicaciones."
   </p>
+  <p><strong>- Cliente en CDMX</strong></p>
+</div>
 
-  <p>⏰ <strong>Horario de atención</strong><br>
-    Lunes a domingo<br>
-    9:00 a 18:00 hrs
-  </p>
+ <div class="info-box">
+  📧 <strong>Correo</strong><br>
+  <a href="mailto:estebanproteccioncivil@gmail.com">
+    estebanproteccioncivil@gmail.com
+  </a>
+</div>
 
-  <p>📍 <strong>Ubicación</strong><br>
-    Ciudad de México
-  </p>
+<div class="info-box">
+  📱 <strong>Teléfono / WhatsApp</strong><br>
+  <a href="https://wa.me/525611675838" target="_blank">
+    +52 561 167 5838
+  </a>
+</div>
+
+<div class="info-box">
+  ⏰ <strong>Horario</strong><br>
+  Lunes a domingo<br>
+  9:00 a 18:00 hrs
+</div>
+
+<div class="info-box">
+  📍 <strong>Ubicación</strong><br>
+  Ciudad de México
+</div>
 
   <!-- BOTONES -->
   <a href="https://wa.me/525611675838" target="_blank" 
