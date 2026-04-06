@@ -14,6 +14,24 @@ body {
   padding-bottom: 90px; /* espacio para footer fijo */
 }
 
+/* ===== HERO ===== */
+.hero-contacto {
+  background: linear-gradient(135deg, #0B0DAF, #1c1fd1);
+  color: white;
+  text-align: center;
+  padding: 100px 20px 60px;
+}
+
+.hero-contacto h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.hero-contacto p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+  
 /* ===== MENU FIJO ===== */
 .menu {
   background-color: #FF6600;
@@ -36,6 +54,11 @@ body {
   text-decoration: underline;
 }
 
+<section class="hero-contacto">
+  <h1>Contáctanos</h1>
+  <p>Capacitación profesional en Protección Civil para tu empresa</p>
+</section>
+  
 /* ===== SECCIÓN CONTACTO ===== */
 .seccion-contacto {
   padding: 80px 20px;
@@ -48,14 +71,43 @@ body {
   color: #0B0DAF;
 }
 
-.caja-contacto {
-  background: white;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
+<div class="contenedor-contacto">
+
+  <!-- FORMULARIO -->
+  <div class="formulario">
+    <h3>Solicita información</h3>
+
+    <input type="text" placeholder="Nombre completo">
+    <input type="email" placeholder="Correo electrónico">
+    <input type="tel" placeholder="Teléfono">
+    <textarea placeholder="Cuéntanos qué necesitas"></textarea>
+
+    <button>Enviar solicitud</button>
+  </div>
+
+  <!-- INFO -->
+  <div class="info-contacto">
+    <h3>Contacto directo</h3>
+
+    <p><strong>Correo:</strong><br>
+      <a href="mailto:estebanproteccioncivil@gmail.com">
+        estebanproteccioncivil@gmail.com
+      </a>
+    </p>
+
+    <p><strong>Teléfono / WhatsApp:</strong><br>
+      <a href="https://wa.me/525611675838" target="_blank">
+        +52 561 167 5838
+      </a>
+    </p>
+
+    <p><strong>Atención:</strong><br>
+      Lunes a viernes<br>
+      9:00 a 18:00 hrs
+    </p>
+  </div>
+
+</div>
 
 .caja-contacto p {
   font-size: 18px;
@@ -111,6 +163,38 @@ footer {
   width: 100%;
   font-size: 14px;
 }
+
+/* ===== FOOTER FIJO ===== */
+footer {
+  background-color: #0B0DAF;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+}
+
+/* ===== CONTENEDOR ===== */
+.contenedor-contacto {
+  display: flex;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+/* ===== FORMULARIO ===== */
+.formulario {
+  flex: 1;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* ... (todo lo demás igual) ... */
 </style>
 
 </head>
