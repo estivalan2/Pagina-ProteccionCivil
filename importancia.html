@@ -172,15 +172,31 @@ footer {
   transform: translateY(0);
 }
 
+/* ===== IMAGEN FINAL ===== */
+.imagen-final {
+  margin: 40px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.imagen-final img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .documento-legal {
-    padding: 30px;
+    padding: 25px;
   }
 
   .titulo-legal {
     font-size: 22px;
   }
 }
+
 </style>
 </head>
 
@@ -273,7 +289,7 @@ footer {
 
   <!-- 👇 IMAGEN AGREGADA -->
 <div class="imagen-final">
-  <img src="img/ley.png" alt="Fundamento legal capacitación">
+  <img src="img/ley.png" alt="Fundamento legal capacitación" loading="lazy">
 </div>
 
  <div class="frase-final">
