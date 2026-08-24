@@ -3,113 +3,142 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PrevMX</title>
+<title>Importancia de la Capacitación | PrevMX</title>
 
 <style>
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #f4f6fa;
+  padding-top: 80px;     /* espacio para menú fijo */
+  padding-bottom: 110px; /* espacio para footer fijo */
 }
 
-/* ===== MENU SUPERIOR ===== */
+/* ===== MENU FIJO (IGUAL AL CÓDIGO 2) ===== */
 .menu {
-  background-color: #FF6600; /* mismo naranja del botón */
+  background-color: #FF6600;
   padding: 15px;
   text-align: center;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   z-index: 1000;
+  box-sizing: border-box;
 }
 
 .menu a {
   margin: 0 15px;
   text-decoration: none;
-  color: white; /* ahora blanco para que contraste */
+  color: white;
   font-weight: bold;
 }
 
-header {
-  background: linear-gradient(135deg, #0B0DAF, #1d20d6);
-  color: white;
-  padding: 80px 20px;
+.menu a:hover {
+  text-decoration: underline;
+}
+
+/* ===== DOCUMENTO LEGAL ===== */
+.seccion-legal {
+  background: linear-gradient(to bottom, #f4f6fa, #e9edff);
+  padding: 90px 20px;
+}
+
+.documento-legal {
+  background: #ffffff;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  border-top: 6px solid #0B0DAF;
+}
+
+.encabezado-legal {
   text-align: center;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 40px;
-}
-
-header p {
-  font-size: 18px;
-  margin-top: 10px;
-}
-
-.boton-principal {
-  background-color: #FF6600;
-  color: white;
-  padding: 15px 30px;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: bold;
-  display: inline-block;
-  margin-top: 20px;
-}
-
-section {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.titulo-seccion {
-  font-size: 30px;
   margin-bottom: 40px;
+}
+
+.sello-cumplimiento {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.titulo-legal {
+  font-size: 32px;
+  color: #0B0DAF;
+  margin-bottom: 10px;
+}
+
+.subtitulo-alarma {
+  color: #c40000;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.leyenda-institucional {
+  font-size: 13px;
+  color: #666;
+  margin-top: 15px;
+}
+
+.bloque-legal {
+  margin-bottom: 35px;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.bloque-legal h4 {
+  color: #0B0DAF;
+  margin-bottom: 10px;
+}
+
+.articulo {
+  background: #f8f9ff;
+  padding: 18px;
+  border-left: 4px solid #0B0DAF;
+  margin-top: 10px;
+  border-radius: 6px;
+}
+
+.caja-sancion {
+  background: #fff0f0;
+  border-left: 6px solid #c40000;
+  padding: 25px;
+  border-radius: 8px;
+  margin: 30px 0;
+}
+
+.caja-sancion strong {
+  color: #c40000;
+}
+
+.frase-final {
+  margin-top: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
   color: #0B0DAF;
 }
 
-.servicios {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-.tarjeta {
-  background: white;
-  padding: 30px;
-  width: 280px;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
-.tarjeta h3 {
-  color: #0B0DAF;
-}
-
-/* ==================================== */
-/* 🔥 INICIO MODIFICACIÓN - IMÁGENES EN TARJETAS */
-/* ==================================== */
-
-.tarjeta img {
+/* ===== FOOTER FIJO ===== */
+footer {
+  background-color: #0B0DAF;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: contain;
-  border-radius: 10px;
-  margin: 15px 0;
+  font-size: 14px;
 }
-  
-/* ==================================== */
-/* 🔥 FIN MODIFICACIÓN - IMÁGENES EN TARJETAS */
-/* ==================================== */
-
-
 
 /* ===== BOTÓN WHATSAPP ===== */
 .whatsapp {
   position: fixed;
-  bottom: 80px;  /* ahora arriba */
+  bottom: 160px;
   right: 20px;
   background-color: #25D366;
   color: white;
@@ -120,180 +149,21 @@ section {
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-
-/* ===== BOTÓN CORREO GENERAL ===== */
+/* ===== BOTÓN CORREO ===== */
 .correo {
   position: fixed;
-  bottom: 20px;  /* ahora abajo */
+  bottom: 100px;
   right: 20px;
   background-color: #0B0DAF;
   color: white;
   padding: 12px 18px;
   border-radius: 50px;
   text-decoration: none;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  display: flex;
-  align-items: center;
-  gap: 8px;
   font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-
-.correo svg {
-  width: 18px;
-  height: 18px;
-  fill: white;
-}
-
-
-footer {
-  background-color: #0B0DAF;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-
-/* ===== SECCIONES PROPORCIONALES ===== */
-
-.quienes-contenido {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 50px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.quienes-texto {
-  flex: 1;
-  font-size: 1.1rem;       /* Texto proporcional */
-  line-height: 1.7;
-  text-align: justify;
-}
-
-.quienes-imagen {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.quienes-imagen img {
-  width: 100%;
-  max-width: 450px;        /* Limita tamaño de imagen */
-  height: auto;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-/* ================================================= */
-/* ===== DOCUMENTO LEGAL CORPORATIVO PREVEN ======= */
-/* ================================================= */
-
-.seccion-legal {
-background: linear-gradient(to bottom, #f4f6fa, #e9edff);
-padding: 90px 20px;
-}
-
-.documento-legal {
-background: #ffffff;
-max-width: 1000px;
-margin: 0 auto;
-padding: 60px;
-border-radius: 12px;
-box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-border-top: 6px solid #0B0DAF;
-}
-
-.encabezado-legal {
-text-align: center;
-margin-bottom: 40px;
-}
-
-.titulo-legal {
-font-size: 32px;
-color: #0B0DAF;
-margin-bottom: 10px;
-letter-spacing: 1px;
-}
-
-.subtitulo-alarma {
-color: #c40000;
-font-weight: bold;
-font-size: 18px;
-text-transform: uppercase;
-letter-spacing: 1px;
-}
-
-.leyenda-institucional {
-font-size: 13px;
-color: #666;
-margin-top: 15px;
-}
-
-.bloque-legal {
-margin-bottom: 35px;
-line-height: 1.8;
-text-align: justify;
-}
-
-.bloque-legal h4 {
-color: #0B0DAF;
-margin-bottom: 10px;
-font-size: 18px;
-}
-
-.articulo {
-background: #f8f9ff;
-padding: 18px;
-border-left: 4px solid #0B0DAF;
-margin-top: 10px;
-border-radius: 6px;
-}
-
-.caja-sancion {
-background: #fff0f0;
-border-left: 6px solid #c40000;
-padding: 25px;
-border-radius: 8px;
-margin: 30px 0;
-}
-
-.caja-sancion strong {
-color: #c40000;
-}
-
-.frase-final {
-margin-top: 50px;
-font-size: 18px;
-font-weight: bold;
-text-align: center;
-color: #0B0DAF;
-}
-
-/* ===== SELLO E ICONO ===== */
-.sello-cumplimiento {
-display: flex;
-justify-content: center;
-margin-bottom: 25px;
-}
-
-.sello-cumplimiento img {
-width: 100px;
-}
-
-/* ===== ANIMACIONES ===== */
-
-@keyframes fadeInUp {
-0% {
-opacity: 0;
-transform: translateY(30px);
-}
-100% {
-opacity: 1;
-transform: translateY(0);
-}
-}
-
+/* ===== ANIMACIÓN ===== */
 .animar-entrada {
   opacity: 0;
   transform: translateY(40px);
@@ -305,25 +175,22 @@ transform: translateY(0);
   transform: translateY(0);
 }
 
+/* ===== IMAGEN FINAL ===== */
+.imagen-final {
+  margin: 40px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
 
-/* ============================= */
-/* INICIO MODIFICACIÓN RESPONSIVE*/
-/* ==============================*/
+.imagen-final img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
 
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-
-  header {
-    padding: 50px 20px;
-  }
-
-  header h1 {
-    font-size: 26px;
-  }
-
-  header p {
-    font-size: 15px;
-  }
-
   .menu {
     padding: 10px;
   }
@@ -334,135 +201,131 @@ transform: translateY(0);
     font-size: 14px;
   }
 
-  .servicios {
-    flex-direction: column;
-    align-items: center;
+  .documento-legal {
+    padding: 25px;
   }
 
-  .tarjeta {
-    width: 95%;
-  }
-
-  .titulo-seccion {
+  .titulo-legal {
     font-size: 22px;
   }
-
-  /*  NUEVO RESPONSIVE QUIÉNES SOMOS */
-  .quienes-contenido {
-    flex-direction: column;
-    text-align: center;
-  }
-
-.quienes-texto {
-  text-align: justify;
 }
-
-}
-
-
-/* ==================================== */
-/* =======  FIN DEL RESPONSIVE  ======= */
-/* ==================================== */
 
 </style>
 </head>
 
 <body>
-<!-- ===== MENU ===== -->
-<header>
-  <nav class="menu">
-    <a href="index.html">Inicio</a>
-    <a href="quienes.html">Quiénes somos</a>
-    <a href="servicios.html">Servicios</a>
-    <a href="cursos.html">Cursos</a>
-    <a href="beneficios.html">Beneficios</a>
-    <a href="importancia.html">Importancia de la Capacitación</a>
-    <a href="contacto.html">Contacto</a>
-  </nav>
-</header>
 
-<header>
-  <h1>PREVENtion Shield 360 ©</h1>
-  <p>(Prevención de Riesgos y Capacitación en Emergencias)</p>
-  <a href="contacto.html" class="boton-principal">Solicitar Asesoría</a>
-</header>
+<!-- ===== MENU SUPERIOR ===== -->
+<nav class="menu">
+  <a href="index.html">Inicio</a>
+  <a href="quienes.html">Quiénes somos</a>
+  <a href="servicios.html">Servicios</a>
+  <a href="cursos.html">Cursos</a>
+  <a href="beneficios.html">Beneficios</a>
+  <a href="importancia.html">Importancia de la Capacitación</a>
+  <a href="contacto.html">Contacto</a>
+</nav>
 
-<!-- ===== PREVENtion Shield ===== -->
+<section class="seccion-legal">
+<div class="documento-legal animar-entrada" id="legal-doc">
 
-<section id="quienes">
-  <h2 class="titulo-seccion">LA PREVENCIÓN SALVA MÁS QUE LA REACCIÓN</h2>
+<div class="encabezado-legal">
+  <img src="img/sello-cumplimiento.png" 
+       alt="Sello de Cumplimiento Normativo" 
+       class="sello-cumplimiento">
 
-  <div class="quienes-contenido">
+  <h2 class="titulo-legal">¿POR QUÉ CAPACITAR A TU PERSONAL?</h2>
+   <div class="subtitulo-alarma">(EVITA SANCIONES)</div>
 
-    <!-- IMAGEN IZQUIERDA -->
-    <div class="quienes-imagen">
-      <img src="img/prevencion.jpg" alt="prevencion.jpg">
-    </div>
-
-    <!-- TEXTO DERECHA -->
-    <div class="quienes-texto">
-      <p>
-       En la Ciudad de México convivimos con riesgos sísmicos, urbanos e hidrometeorológicos de manera constante. 
-       Ante esta realidad, reaccionar es necesario, pero prevenir es decisivo.
-      </p>
-       <p>
-       La reacción actúa cuando el daño ya comenzó; la prevención reduce la probabilidad de que ese daño ocurra o minimiza sus consecuencias. 
-       Cada simulacro, cada capacitación y cada plan de emergencias representan vidas protegias antes de los desastres. 
-      <p>
-       La experiencia nos ha demostrado que la organización, la preparación y la cultura de prevención marcan la diferencia entre el caos y el control. 
-       Por eso sostenemos con firmeza: la prevención salva más que la reacción.
-      </p>
-    </div>
-
+  <div class="leyenda-institucional">
+    Fundamento jurídico conforme a la Ley Federal del Trabajo vigente en México.
   </div>
+</div>
+  <div class="bloque-legal">
+    En México es obligación que los patrones capaciten a sus trabajadores en materia de prevención y seguridad,
+    conforme a lo dispuesto por la <strong>Ley Federal del Trabajo</strong>.
+    La capacitación no es opcional: es un mandato legal.
+  </div>
+
+  <div class="bloque-legal">
+    <h4>Capítulo I: Obligaciones de los Patrones</h4>
+    <div class="articulo">
+      <strong>Artículo 132 fracción XV.</strong>
+      Es obligación del patrón proporcionar capacitación y adiestramiento a sus trabajadores.
+    </div>
+  </div>
+
+  <div class="bloque-legal">
+    <h4>Capítulo III BIS: Productividad, Formación y Capacitación</h4>
+
+    <div class="articulo">
+      <strong>Artículo 153-A.</strong>
+      El patrón tiene la obligación de capacitar a su personal y éstos a recibir el adiestramiento que eleve su nivel de vida.
+    </div>
+
+    <div class="articulo">
+      <strong>Artículo 153-C fracción II.</strong>
+      La capacitación debe informar sobre los riesgos a los que están expuestos los trabajadores
+      y las normas oficiales mexicanas aplicables para prevenir riesgos laborales.
+    </div>
+  </div>
+
+  <div class="bloque-legal">
+    <h4>Facultades de Inspección</h4>
+    <div class="articulo">
+      <strong>Artículo 541 fracción I.</strong>
+      Los Inspectores del Trabajo pueden vigilar el cumplimiento de las normas.
+    </div>
+  </div>
+
+  <div class="caja-sancion">
+    <strong>INCUMPLIMIENTO = SANCIÓN ECONÓMICA</strong><br><br>
+    <strong>Artículo 992.</strong> Las violaciones serán sancionadas conforme a la Ley.<br><br>
+    <strong>Artículo 994 fracción IV.</strong>
+    Multa de 250 a 5000 veces la Unidad de Medida y Actualización (UMA).
+  </div>
+
+  <div class="bloque-legal" style="background:#eef4ff; padding:20px; border-left:4px solid #0B0DAF; border-radius:6px; margin-top:20px;">
+    <strong>💰 Conversión real de sanción:</strong><br>
+    Una multa de <strong>5000 UMA</strong> equivale aproximadamente a <strong>$586,550 MXN</strong> conforme al valor oficial de la UMA para 2026.
+  </div>
+
+  <div class="bloque-legal">
+    <h4>En caso de Accidente de Trabajo</h4>
+    <div class="articulo">
+      <strong>Artículos 473 y 474.</strong> Definen los riesgos y accidentes de trabajo.
+    </div>
+    <div class="articulo">
+      <strong>Artículo 488.</strong> Obliga al patrón a prestar los primeros auxilios.
+    </div>
+  </div>
+
+  <!-- 👇 IMAGEN AGREGADA -->
+<div class="imagen-final">
+  <img src="img/ley.png" alt="Fundamento legal capacitación" loading="lazy">
+</div>
+
+ <div class="frase-final">
+    "La capacitación no es un gasto.  
+    Es una obligación legal, una responsabilidad empresarial  
+    y la base de una cultura preventiva sólida".
+ </div>
+  
+</div>
 </section>
 
-<section id="quienes">
-  <h2 class="titulo-seccion">CUANDO LA EMERGENCIA LLEGA, YA NO HAY TIEMPO PARA IMPROVISAR</h2>
-
-  <div class="quienes-contenido">
-
-    <!-- IMAGEN A LA DERECHA -->
-     <div class="quienes-texto">
-      <p>
-       Las emergencias no avisan y no dan segundas oportunidades. En una ciudad como la nuestra, donde los riesgos son parte de la realidad cotidiana, 
-       la diferencia entre el desorden y la respuesta eficaz radica en la preparación previa.
-      </p>
-
-      <p>
-       La capacitación, los protocolos y la planeación estratégica no se construyen en el momento del impacto; se diseñan y practican antes. 
-       Cuando ocurre un sismo, un incendio o cualquier contingencia, las decisiones deben ser inmediatas, claras y coordinadas.
-      </p>
-
-      <p>
-       Improvisar en medio de la crisis cuesta tiempo, y el tiempo en una emergencia significa vidas.
-       Por eso, la preparación constante no es opcional: es una responsabilidad.
-      </p>
-    </div>
-
-    <!-- IMAGEN DERECHA -->
-    <div class="quienes-imagen">
-      <img src="img/respuesta.jpg" alt="respuesta.jpg">
-    </div>
-
-  </div>
-</section>
-
-<!-- BOTÓN WHATSAPP -->
+<!-- BOTONES FLOTANTES -->
 <a href="https://wa.me/525611675838" class="whatsapp" target="_blank">
   WhatsApp
 </a>
 
-<!-- BOTÓN CORREO GENERAL -->
 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=estebanproteccioncivil@gmail.com" 
    target="_blank" 
    class="correo">
-  <svg viewBox="0 0 24 24">
-    <path d="M2 4h20v16H2V4zm10 9L3.5 6h17L12 13zm0 2l8-7v10H4V8l8 7z"/>
-  </svg>
   Correo
 </a>
 
+<!-- FOOTER -->
 <footer>
 SHIELD Prevention MX 2026 © | Todos los derechos reservados
 </footer>
@@ -470,8 +333,6 @@ SHIELD Prevention MX 2026 © | Todos los derechos reservados
 <script>
 function activarAnimacion() {
   const doc = document.getElementById("legal-doc");
-  if (!doc) return;
-
   const pos = doc.getBoundingClientRect().top;
   const screenPos = window.innerHeight * 0.85;
 
@@ -483,7 +344,6 @@ function activarAnimacion() {
 window.addEventListener("scroll", activarAnimacion);
 window.addEventListener("load", activarAnimacion);
 </script>
-
 
 </body>
 </html>
